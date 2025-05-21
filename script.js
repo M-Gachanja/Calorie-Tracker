@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             foodList.appendChild(foodItemEl);
         });
         
-        // Add event listeners to delete buttons
+       
         document.querySelectorAll('.delete-btn').forEach(btn => {
             btn.addEventListener('click', deleteFoodItem);
         });
