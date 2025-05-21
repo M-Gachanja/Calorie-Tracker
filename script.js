@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderFoodItems();
         updateTotalCalories();
         
-        // Reset form
+        
         foodForm.reset();
         foodNameInput.focus();
     }
