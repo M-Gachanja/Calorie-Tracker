@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // DOM Elements
+    
     const foodForm = document.getElementById('food-form');
     const foodNameInput = document.getElementById('food-name');
     const foodList = document.getElementById('food-list');
@@ -8,22 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     const loadingEl = document.getElementById('loading');
 
-    // API Configuration
+    
     const API_KEY = 'srnIKOfjbQfczxIA1OM6mw==YmbasOuGNrKa3WPs';
     const API_URL = 'https://api.calorieninjas.com/v1/nutrition?query=';
 
-    // Initialize food items from localStorage
+    
     let foodItems = JSON.parse(localStorage.getItem('foodItems')) || [];
     
-    // Render initial food items
+    
     renderFoodItems();
     updateTotalCalories();
 
-    // Event Listeners
+    
     foodForm.addEventListener('submit', fetchCalorieData);
     resetBtn.addEventListener('click', resetFoodItems);
 
-    // Fetch calorie data from API
+    
     async function fetchCalorieData(e) {
         e.preventDefault();
         
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Show loading state
+        
         submitBtn.disabled = true;
         loadingEl.classList.remove('hidden');
         clearError();
